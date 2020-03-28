@@ -21,7 +21,7 @@ exports.handler = function (event, context, callback) {
 
     console.log(`Fetching ${event.path}`);
     s3.getObject({
-        Bucket: "zipsourcefile",
+        Bucket: "zipdestinationfiles",
         Key: event.path
     }).promise()
         .then(data => {
